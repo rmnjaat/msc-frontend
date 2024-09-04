@@ -1,0 +1,46 @@
+.feedback-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+
+.feedback-heading{
+    align-items: center;
+    background-color:#f5f5f5;
+    padding: 2% 2% 2% 6%;
+    color: black;
+}
+
+
+.feedback-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 20px); /* Two cards per row */
+    min-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+}
+
+.feedback-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .feedback-card {
+        width: 100%; /* One card per row */
+    }
+}

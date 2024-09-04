@@ -1,0 +1,72 @@
+body h1 , h2,h3,h4 {
+  font-weight: 100;
+}
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    margin:  auto;
+    padding: 20px 20px;
+
+     /* margin-top: 40px; */
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 3rem;
+}
+
+.cards {
+     margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Ccard Styling */
+.Ccard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.Ccard:hover {
+    transform: scale(1.02);
+}
+
+.card-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.Ccard h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.Ccard p {
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Ccard {
+        max-width: 89%;
+    }
+}
+

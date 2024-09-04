@@ -1,0 +1,369 @@
+body h1,
+h2,
+h3,
+h4 {
+  font-weight: 100;
+}
+
+/* --primary-color3:#eb5b1f;
+  --primary-color:#fcfcfca3;
+  --primary-color2:#8a4eac;
+  --primary-color4:#8a4eacab;
+  --sec-color:rgba(14, 12, 10, 0.919);   */
+
+.module {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-top: 40px;
+  color: white; /* Text color */
+  overflow: hidden;
+}
+
+.module::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url("./assets/m1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(40%);
+  z-index: -1; /* Ensures the pseudo-element is behind the text */
+}
+
+.module header {
+  position: relative; /* Ensure the text is above the pseudo-element */
+  z-index: 1;
+}
+
+.module > header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 20px 10px;
+}
+.module > header > h1 {
+  margin-bottom: 12px;
+  color: white;
+  text-shadow: 0 1px 0 black;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+.heading {
+  font-size: 1.3em;
+  margin: 50px 0;
+  font-weight: 100;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  margin-top: 10px;
+}
+
+.card {
+  text-align: center;
+  width: 30%;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+.card-header {
+  position: relative; /* Ensures the pseudo-element is positioned relative to .card-header */
+  width: 100%; /* Adjust width as needed */
+  height: 160px; /* Adjust height as needed */
+  overflow: hidden; /* To hide any overflow from the pseudo-element */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  background: url("./assets/m2M.jpg") center/cover no-repeat; /* Set the image as a permanent background */
+}
+
+.card-header::before {
+  content: ""; /* Pseudo-element content */
+  position: absolute; /* Position the pseudo-element absolutely within .card-header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url("./assets/m2M.jpg");
+  filter: brightness(40%); /* Apply filter to darken the background image */
+  z-index: 1; /* Ensures the pseudo-element is behind the text */
+
+  /* opacity: 0.8;  */
+}
+
+.card-header h2 {
+  position: relative; /* Position relative to ensure it stays above the background */
+  z-index: 1; /* Keeps the text above the background image */
+
+  padding: 20px; /* Add padding for spacing */
+}
+
+.card-body {
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.card-desc {
+  text-align: center;
+}
+
+.card-body .btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background-color: var(--primary-color2);
+  text-decoration: none;
+  margin-top: 30px;
+  padding: 10px 5px;
+  transition: 0.3s;
+}
+
+.card-body .btn:hover {
+  transform: scale(1.1);
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+.see-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 15px;
+  background-color: var(--primary-color3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: auto;
+}
+
+.see-more-btn:hover {
+  background-color: var(--primary-color3);
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .module > header > h1 {
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+
+  .module > header > h2{
+    font-size: 1em;
+    font-weight: 100;
+  } 
+  .module {
+    height: 300px;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .heading {
+    padding: 20px;
+    font-size: 1em;
+    margin: 0px;
+  }
+
+  .card {
+    width: 93%;
+  }
+  .contact__container {
+    /* width: 85%; */
+  }
+}
+
+footer {
+  background-color: var(--primary-color2);
+  color: rgba(255, 255, 255, 0.807);
+  font-size: 16px;
+}
+footer * {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+/* .rowf {
+  padding: 1em 1em;
+} */
+.row.primary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+}
+.column {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  min-height: 15em;
+}
+.column1 {
+  max-width: 443px;
+}
+.footer h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 3em;
+  margin: 8px 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0;
+  white-space: nowrap;
+}
+.footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li:not(:first-child) {
+  margin-top: 0.8em;
+}
+
+.footer ul li a {
+  color: var(--primary-color3);
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  /* color: #2a8ded; */
+}
+.about p {
+  text-align: justify;
+  line-height: 1.5;
+  margin: 0;
+}
+.subscribe input,
+button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: var(--primary-color3);
+}
+button {
+  background-color: var(--primary-color5);
+  color: rgba(255, 255, 255, 0.88);
+}
+div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 1.5em;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  /* color: #ffffff; */
+}
+
+.social .ic {
+  /* color:var(--primary-color3); */
+  color: rgba(255, 255, 255, 0.638);
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social .ic:hover {
+  /* background-color: white; */
+  /* color:var(--primary-color2); */
+  color: white;
+
+  cursor: pointer;
+}
+
+.copyright {
+  background-color: #25262e;
+}
+/* .footer-menu {
+  float: left;
+  margin-top: 10px;
+} */
+
+/* .footer-menu a {
+  color: #cfd2d6;
+  padding: 6px;
+
+  text-decoration: none;
+} */
+/* .footer-menu a:hover {
+  color: #27bcda;
+} */
+.copyright p {
+  font-size: 0.9em;
+  margin: 0.4em;
+}
+
+.column h2 {
+  color: white;
+  padding: 25px 0px;
+}
+
+.hello{
+  margin-top:auto ;
+}
+
+@media screen and (max-width: 850px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column.subscribe textarea {
+  width: 100%;
+  height: 6em; /* Same height as the original input */
+  padding: 10px; /* Padding to make it look similar to the input */
+  /* border: 1px solid #ccc; Adjust the border to match the input */
+  border-radius: 5px; /* Same border-radius as input */
+  resize: none; /* Disable resizing to maintain the appearance */
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
+  font-family: "Open Sans", sans-serif; /* Match font style */
+  font-size: 18px; /* Match font size */
+  color: rgba(255, 255, 255, 0.807);
+  background-color: rgba(255, 255, 255, 0.257);
+  margin-bottom: 10px; /* Space below textarea */
+}
+
+.column.subscribe textarea::placeholder {
+  color: rgba(255, 255, 255, 0.707);
+}
+
+.column.subscribe textarea:focus {
+  outline: none; /* Remove default focus outline */
+  /* border-color:rgb(255, 255, 255); */
+}

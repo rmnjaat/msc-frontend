@@ -1,0 +1,169 @@
+body h1 , h2,h3,h4 {
+  font-weight: 100;
+}
+
+.Amodule {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  color: white; /* Text color */
+  overflow: hidden;
+}
+
+.Amodule::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url("./assets/m3.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: left;
+  filter: brightness(40%);
+  
+  z-index: -1; /* Ensures the pseudo-element is behind the text */
+}
+
+.Amodule header {
+  position: relative; /* Ensure the text is above the pseudo-element */
+  z-index: 1;
+}
+.Amodule > header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 95%;
+  padding: 20px 10px;
+}
+.Amodule > header > h1 {
+  margin-bottom: 12px;
+  color: white;
+  text-shadow: 0 1px 0 black;
+  text-align: left;
+}
+.Amodule > header > p {
+  
+  text-align:justify ;
+  color: rgba(255, 255, 255, 0.759);
+}
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  gap: 30px;
+}
+
+.about-us h1 {
+  text-align: center;
+  color: #333;
+  font-size: 3rem;
+}
+
+.about-us-heading,.Amodule{
+  margin-top: -14px; /* Negative margin equal to the gap value */
+}
+
+
+/* Default style for about-card for larger screens */
+.about-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s;
+  margin: 10px;
+}
+
+.about-card:hover {
+  transform: scale(1.02);
+}
+
+.about-card-photo {
+  width: 300px; /* Reduced image size */
+  height: 300px; /* Square dimensions */
+  object-fit: cover;
+  border-right: 2px solid #eee; /* Adds a right border for separation */
+  margin: 10px; /* Space around the image */
+}
+
+.about-card-body {
+  padding: 0px 20px;
+  flex: 1; /* Allows the text area to take up the remaining space */
+}
+
+.about-card-body h1{
+  font-size: 2em;
+  margin: 9px 0;
+}
+
+
+.about-card-body h3{
+  margin: 13px 0;
+}
+
+/* .about-card-name {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+    color: #333;
+} */
+
+.about-card-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Media query for smaller screens (phones) */
+@media (max-width: 768px) {
+  .Amodule > header > h1 {
+    font-size: 1.5em;
+    font-weight: 800;
+    
+  }
+
+  .Amodule > header > p{
+  
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 100;
+  }
+
+  .about-card {
+    flex-direction: column; /* Stacks image on top of text */
+    text-align: center; /* Centers the text for a better mobile look */
+    max-width: 95%;
+  }
+  .about-card-description {
+    padding: 0 10px;
+  }
+
+  .about-card-photo {
+    margin: 0 auto; /* Centers the image on smaller screens */
+    border-right: none; /* Removes the right border on smaller screens */
+    border-bottom: 2px solid #eee; /* Adds a bottom border for separation */
+    width: 300px; /* Reduced image size */
+    height: 250px; /* Square dimensions */
+  }
+
+  .about-card-body {
+    padding: 10px;
+  }
+
+  .about-card-body h1{
+    font-size: 1.5em;
+  }
+
+  .about-us h1 {
+    /* font-size: 2em; */
+  }
+}
