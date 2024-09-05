@@ -17,7 +17,11 @@ const Post = () => {
         try {
             const response = await axios.post(`${apiUrl}/post_post`, { title, date, time, venue, description }, { withCredentials: true });
             const data = await response.data;
-            alert(data.message);
+          
+            if(response.status==200){
+                alert("Post Added");
+            }
+            
         } 
         
         catch (error) {

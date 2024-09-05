@@ -8,8 +8,9 @@ const signUpUser = async (name, password, email) => {
     try {
         const response = await axios.post( `${apiUrl}/signup` , { name, password, email }, { withCredentials: true });
         const data = await response.data;
-        console.log('Response Headers:', response.headers);
-        console.log('Cookies on frontend:', document.cookie);
+        if(response.status==200){
+            alert("User Added");
+        }
         return data
     }
 
@@ -43,7 +44,7 @@ const checkAuthStatus = async () => {
         const response = await axios.get(`${apiUrl}/auth`, { withCredentials: true });
         const data = await response.data;
         return data;
-        console.log(data);
+        
     }
 
     catch (error) {

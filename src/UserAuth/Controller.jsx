@@ -9,6 +9,7 @@
   import Nav from "../Nav"
   import Feedback from "../Feedback/Feedback"
   import EDetails from "../EDetails";
+import Admin from "./Admin";
 
  
 
@@ -26,12 +27,12 @@
             <Route element={<EDetails />} path="/details" />
 
             <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/post" element={<Post />} />
-            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/xonvfsjktnxbw" element={<Signup />} />
+            <Route path="/padzdvdssddosdfefbfrfdudkcdbvt" element={<Post />} />
+            <Route path="/feqweqwdbqqawwqvbbdclqkkww" element={<Feedback />} />
 
             {auth.isLoggedIn && auth.user && (
-              <Route path="/home" element={<div>sdfasfasdfsafdfsf</div>} />
+              <Route path="/home" element={<Admin/>} />
             )}
           </Routes>
         </BrowserRouter>

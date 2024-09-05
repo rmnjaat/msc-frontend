@@ -4,7 +4,7 @@ import "./EDetails.css";
 const EDetails = () => {
   const location = useLocation();
   const { data } = location.state || {};
-  console.log(data);
+
 
   return (
     <>

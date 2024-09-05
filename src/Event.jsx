@@ -33,11 +33,11 @@ export default function Event() {
 
   async function handleFeedbackSubmit() {
     const response = await axios.post(`${API_URL}/post_feedback`, { feedback });
-    console.log(response);
+    
     if (response.status === 200) {
       alert("Feedback Submitted Successfuly .");
     }
-    console.log(response);
+    
     setFeedback("");
   }
 
@@ -49,7 +49,7 @@ export default function Event() {
         if (!isCancelled) {
           setIsLoding(false)
           setEvents(response.data.data);
-          console.log(response.data.data);
+         
         }
       } catch (error) {
         console.error("Error fetching events:", error);
